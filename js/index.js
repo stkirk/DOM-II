@@ -9,3 +9,13 @@ signMeUp.forEach((element) => {
     console.log("Someone clicked me!");
   });
 });
+
+const section = document.querySelectorAll("section");
+section.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.style.backgroundColor = "#FFF0F5";
+  });
+  element.addEventListener("mouseout", () => {
+    element.style.backgroundColor = "";
+  });
+});
