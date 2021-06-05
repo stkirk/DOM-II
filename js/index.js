@@ -92,3 +92,24 @@ document.addEventListener("copy", (e) => {
 window.addEventListener("load", (e) => {
   textField.focus();
 });
+
+//prevent nav buttons from reloading the page
+const navButtons = document.querySelectorAll("nav a");
+navButtons.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+
+//stop propagation example
+const headerIntro = document.querySelector(".intro");
+const headerP = document.querySelector("header p");
+
+headerP.addEventListener("click", (e) => {
+  e.stopPropagation();
+  headerP.style.backgroundColor = "pink";
+});
+
+headerIntro.addEventListener("click", (e) => {
+  headerIntro.style.backgroundColor = "green";
+});
