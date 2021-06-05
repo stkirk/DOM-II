@@ -38,3 +38,12 @@ images.forEach((element) => {
     element.style.transform = "scale(1, 1)";
   });
 });
+
+// double click footer
+const footer = document.querySelector("footer");
+const footerP = document.querySelector("footer p");
+
+footer.addEventListener("dblclick", (e) => {
+  console.log("footer");
+  footerP.style.fontSize = "5rem";
+});
