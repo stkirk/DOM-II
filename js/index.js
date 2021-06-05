@@ -7,6 +7,7 @@ signMeUp.forEach((element) => {
   element.addEventListener("click", (e) => {
     //do something when button is clicked
     console.log("Someone clicked me!");
+    textField.focus();
   });
 });
 
@@ -54,7 +55,7 @@ footer.addEventListener("click", (e) => {
   footerP.style.fontSize = "";
 });
 
-//create text field, flip above image when focused on
+//create text input, flip above image when focused on
 
 //create textfield
 const textField = document.createElement("input");
@@ -66,10 +67,15 @@ console.log("text field", textField);
 const destinationContent = document.querySelector(".content-destination");
 destinationContent.appendChild(textField);
 
-//focus on text area flips above image
+//focus on text input flips above image
 const destinationImage = document.querySelector(".content-destination img");
 textField.addEventListener("focus", (e) => {
   destinationImage.style.transform = "rotate(180deg)";
+});
+
+//blur text input
+textField.addEventListener("blur", (e) => {
+  e.target.style.backgroundColor = "pink";
 });
 
 //paste event in text input
