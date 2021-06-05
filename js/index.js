@@ -82,3 +82,8 @@ textField.addEventListener("blur", (e) => {
 textField.addEventListener("paste", (e) => {
   alert("NO PASTING ALLOWED, TRY AGAIN FOOL...MUAHAHAHAHAHAHAHA");
 });
+
+//copy event
+document.addEventListener("copy", (e) => {
+  alert("Please Do not copy me");
+});
