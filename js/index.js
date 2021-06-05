@@ -26,4 +26,15 @@ document.addEventListener("keydown", (e) => {
   alert(`ALERT! you have pressed the ${e.key} key!!!!!!!`);
 });
 
-//Wheel makes fonts bigger
+//Wheel makes images bigger, click back to normal
+const images = document.querySelectorAll("section img");
+console.log("images", images);
+
+images.forEach((element) => {
+  element.addEventListener("wheel", (e) => {
+    element.style.transform = "scale(1.5, 1.5)";
+  });
+  element.addEventListener("click", (e) => {
+    element.style.transform = "scale(1, 1)";
+  });
+});
