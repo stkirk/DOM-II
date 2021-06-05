@@ -87,3 +87,8 @@ textField.addEventListener("paste", (e) => {
 document.addEventListener("copy", (e) => {
   alert("Please Do not copy me");
 });
+
+//load event
+window.addEventListener("load", (e) => {
+  textField.focus();
+});
