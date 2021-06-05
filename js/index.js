@@ -68,6 +68,11 @@ destinationContent.appendChild(textField);
 
 //focus on text area flips above image
 const destinationImage = document.querySelector(".content-destination img");
-textField.addEventListener("focus", () => {
+textField.addEventListener("focus", (e) => {
   destinationImage.style.transform = "rotate(180deg)";
+});
+
+//paste event in text input
+textField.addEventListener("paste", (e) => {
+  alert("NO PASTING ALLOWED, TRY AGAIN FOOL...MUAHAHAHAHAHAHAHA");
 });
