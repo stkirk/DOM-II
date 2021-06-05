@@ -44,6 +44,30 @@ const footer = document.querySelector("footer");
 const footerP = document.querySelector("footer p");
 
 footer.addEventListener("dblclick", (e) => {
-  console.log("footer");
+  //   console.log("footer");
   footerP.style.fontSize = "5rem";
+});
+
+//click footer, fontsize back to normal
+footer.addEventListener("click", (e) => {
+  //   console.log("footer");
+  footerP.style.fontSize = "";
+});
+
+//create text field, flip above image when focused on
+
+//create textfield
+const textField = document.createElement("input");
+textField.type = "text";
+textField.style.margin = "2%";
+console.log("text field", textField);
+
+//add text input to content-destination section
+const destinationContent = document.querySelector(".content-destination");
+destinationContent.appendChild(textField);
+
+//focus on text area flips above image
+const destinationImage = document.querySelector(".content-destination img");
+textField.addEventListener("focus", () => {
+  destinationImage.style.transform = "rotate(180deg)";
 });
